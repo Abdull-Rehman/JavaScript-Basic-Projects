@@ -1,0 +1,163 @@
+/* importing fonts from font awesome */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  /* Primary blue colors */
+  --primary-blue-dark1: hsl(205, 78%, 60%);
+  --primary-blue-dark2: hsl(205, 100%, 78%);
+  --primary-blue-light: hsl(205, 100%, 96%);
+  --primary-gray: #f1f5f8;
+
+  /* transitions */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.container {
+  width: 25rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  z-index: 99;
+}
+
+.heading {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading h1 {
+  letter-spacing: 0.3rem;
+}
+
+.bottom-bar {
+  width: 40%;
+  height: 4px;
+  background-color: var(--primary-blue-dark1);
+  margin-top: 0.6rem;
+}
+
+.card {
+  width: 650px;
+  max-width: 80vw;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.5em;
+  margin-top: 3rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.picture-box {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.picture-box img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.picture-box::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-color: var(--primary-blue-dark1);
+  position: absolute;
+  left: 8px;
+  bottom: 5px;
+  border-radius: 50%;
+}
+
+.picture-box::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: var(--primary-blue-dark1);
+  color: white;
+}
+
+.name-box {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  color: var(--primary-blue-dark1);
+}
+
+.info {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+  gap: 0.5rem;
+}
+
+.navigation-buttons i {
+  font-size: 1rem;
+  color: hsl(205, 100%, 78%);
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.navigation-buttons i:hover {
+  color: var(--primary-blue-dark1);
+}
+
+.surprise-button {
+  display: inline-block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.4rem;
+  border-color: hsl(205, 78%, 60%);
+  background-color: var(--primary-blue-light);
+  cursor: pointer;
+  margin-top: 0.3rem;
+}
+
+.surprise-button:hover {
+  background-color: var(--primary-blue-dark1);
+  color: black;
+}

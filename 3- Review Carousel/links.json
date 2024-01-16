@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "pic": "./pics/picture-1.png",
+    "name": "John Smith",
+    "title": "Web Designer",
+    "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem earum deserunt expedita aliquam tenetur, dolores quae corporis quas, tempore explicabo quis provident illo adipisci nostrum. Qui quam saepe facilis voluptate? "
+  },
+  {
+    "id": 2,
+    "pic": "./pics/picture-2.png",
+    "name": "Kabeer Singh",
+    "title": "Indian Actor",
+    "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nisi assumenda fugiat libero sapiente in obcaecati quos blanditiis ea? Non dolorum voluptatem omnis doloremque quos neque aut maxime quis voluptas!"
+  },
+
+  {
+    "id": 3,
+    "pic": "./pics/picture-3.png",
+    "name": "Mr. Bean",
+    "title": "American Actor",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur suscipit dolor quaerat dolorum, deleniti sapiente eligendi unde accusamus et ad? Voluptatem sint natus minima velit optio ab qui reprehenderit saepe."
+  },
+
+  {
+    "id": 4,
+    "pic": "./pics/picture-4.png",
+    "name": "The Man",
+    "title": "Best Lawyer",
+    "info": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim sequi molestias delectus quaerat neque optio beatae consectetur! Porro eius deserunt veritatis alias laudantium mollitia est, tempora quae, quidem dolor similique!"
+  }
+]
