@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* importing fonts from font awesome */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  /* Primary blue colors */
+  --primary-blue-dark1: hsl(205, 78%, 60%);
+  --primary-blue-dark2: hsl(205, 100%, 78%);
+  --primary-blue-light: hsl(205, 100%, 96%);
+  --primary-gray: #f1f5f8;
+
+  /* transitions */
+  --slow-pase: all 0.3s linear;
+}
+
+body {
+  background-color: var(--primary-gray);
+}
+
+.container {
+  background-color: white;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  height: 70px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.sub-navbar-active {
+  height: 16.3rem;
+}
+
+.main-navbar {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-bottom: 5px;
+}
+
+.name {
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.Last-name {
+  color: var(--primary-blue-dark1);
+}
+
+.hamburger {
+  width: 1.5rem;
+  height: 1.2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: var(--slow-pase);
+}
+
+.hamburger:hover {
+  transform: rotate(90deg);
+}
+
+.hamburger:hover .lines {
+  border-color: black;
+}
+
+.lines {
+  width: 95%;
+  border: 2.3px solid var(--primary-blue-dark1);
+  border-radius: 1.3px;
+  transition: var(--slow-pase);
+}
+
+.sub-navbar {
+  width: 100%;
+}
+
+.menu-btn {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--slow-pase);
+}
+
+.menu-btn:hover {
+  background-color: var(--primary-blue-dark2);
+  color: var(--primary-blue-dark1);
+  padding-left: 25px;
+}
