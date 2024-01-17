@@ -1,0 +1,107 @@
+/* importing fonts from font awesome */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary blue colors */
+  --primary-blue-dark1: hsl(205, 78%, 60%);
+  --primary-blue-dark2: hsl(205, 100%, 78%);
+  --primary-blue-light: hsl(205, 100%, 96%);
+  /* primary Gray color  */
+  --primary-gray: #f1f5f8;
+  --primary-gray-dark: hsl(210, 22%, 49%);
+  /* gold color  */
+  --clr-gold: #c59d5f;
+  /* white color  */
+  --white-color: white;
+
+  /* transitions */
+
+  /* width and height  */
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-gray);
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  height: 100vh;
+  margin: 8rem auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-family: "Great Vibes", cursive;
+  color: var(--clr-gold);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.question-box {
+  max-width: 620px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 1.2rem 1.2rem 0 1.2rem;
+  margin: auto;
+  margin-top: 1.5rem;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.question-title-btn {
+  letter-spacing: 0.2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-text {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* css for button start from here  */
+.btn-box {
+  color: #c59d5f;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.btn-box:hover {
+  transform: rotate(90deg);
+}
+
+.question-text {
+  display: none;
+}
+
+.show-text .question-text {
+  display: block;
+}
+
+.minus-btn {
+  display: none;
+}
+
+.show-text .minus-btn {
+  display: block;
+}
+
+.show-text .plus-btn {
+  display: none;
+}
