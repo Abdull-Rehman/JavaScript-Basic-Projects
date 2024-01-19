@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --primary-color: aliceblue;
+  --secondary-color: hsl(205, 100%, 69%);
+  --dark-shade: rgba(0, 0, 0, 0.6);
+  --white-color: white;
+
+  /* transitions */
+  --trans-03: all 0.3s linear;
+}
+
+.preloader {
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+}
+
+.preloader.hide-preloader {
+  display: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-shade);
+  position: absolute;
+  z-index: -1;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+.switch-btn {
+  width: 7rem;
+  height: 2rem;
+  background-color: var(--white-color);
+  position: absolute;
+  bottom: 7%;
+  left: 7%;
+  border: none;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+span {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+  position: absolute;
+  background-color: var(--secondary-color);
+  border-radius: 0.4rem;
+  transition: var(--trans-03);
+}
+
+.active .switch {
+  left: 50%;
+}
