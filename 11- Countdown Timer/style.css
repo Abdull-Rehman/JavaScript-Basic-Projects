@@ -1,0 +1,149 @@
+/* font links */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* variables */
+:root {
+  --clr-primary-1: hsl(205, 72%, 37%);
+  --clr-grey-1: hsl(209, 23%, 60%);
+  --clr-grey-2: hsl(210, 22%, 49%);
+  --clr-grey-3: hsl(209, 61%, 16%);
+  --clr-grey-4: hsl(210, 36%, 96%);
+  --white-clr: white;
+
+  --radius: 0.5rem;
+  --spacing: 0.25rem;
+
+  --ff-primary: "Open sans", sans-serif;
+  --ff-secondary: "Roboto", sans-serif;
+}
+
+/* Global css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-grey-4);
+  font-size: 0.875rem;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-secondary);
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  margin-bottom: 1.25rem;
+  line-height: 0.75rem;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+.section {
+  padding: 5rem 0;
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    place-items: center;
+  }
+
+  .img-container {
+    margin-bottom: 0;
+  }
+}
+
+.img-container {
+  margin-bottom: 2rem;
+}
+
+.img-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.countdown-container > h3 {
+  color: var(--clr-primary-1);
+}
+
+.countdown-container > h4 {
+  line-height: normal;
+}
+
+.countdown-container > p {
+  color: var(--clr-grey-1);
+}
+
+.deadline-container {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.deadline-boxes {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--clr-grey-3);
+  color: var(--white-clr);
+  margin-right: 1rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.deadline-container h4:not(.expired) {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  padding-top: 1.2rem;
+}
+.expired {
+  line-height: normal;
+  color: var(--clr-grey-1);
+}
+.deadline-container span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
