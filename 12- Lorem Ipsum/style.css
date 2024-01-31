@@ -1,0 +1,130 @@
+/* importing fonts from font awesome */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary blue colors */
+  --primary-blue-dark1: hsl(205, 78%, 60%);
+  --primary-blue-dark2: hsl(205, 100%, 78%);
+  /* primary Gray color  */
+  --primary-gray: #f1f5f8;
+  --primary-gray-dark: hsl(205, 86%, 17%);
+  --gray-light: hsl(210, 22%, 49%);
+
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Roboto", sans-serif;
+
+  --transition: all 0.3s linear;
+}
+
+body {
+  background-color: var(--primary-gray);
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+}
+
+/* if the screen size if less than 800px */
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  font-family: var(--ff-secondary);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+.container {
+  padding: 5rem 0;
+}
+
+.container h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.section {
+  width: 90vw;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+label {
+  font-size: 1.25rem;
+  letter-spacing: 0.25rem;
+  color: var(--primary-gray-dark);
+}
+
+#amount {
+  font-size: 1.15rem;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  border: none;
+}
+
+#generate {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary-gray-dark);
+  padding: 0.5rem 0.9rem;
+  background-color: var(--primary-blue-dark1);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#generate:hover {
+  background-color: var(--primary-blue-dark2);
+  color: var(--primary-blue-dark1);
+}
+
+.paragraphs {
+  margin-top: 2rem;
+  color: var(--gray-light);
+  text-align: center;
+}
