@@ -1,0 +1,263 @@
+/* importing fonts from font awesome */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary colors */
+  --primary-clr: hsl(210, 36%, 96%);
+
+  /* secondary colors */
+  --secondary-clr1: #49a6e9;
+  --secondary-clr2: hsl(205, 86%, 81%);
+
+  /* Darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+
+  /* Grey light - used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(210, 36%, 96%);
+
+  /* Solic colors */
+  --white-clr: #fff;
+  --black-clr: #222;
+  --red-clr-dark1: hsl(360, 67%, 44%);
+  --red-clr-dark2: #721c24;
+  --red-clr-light1: hsl(360, 71%, 66%);
+  --red-clr-light2: #f8d7da;
+  --green-clr-dark1: hsl(125, 67%, 44%);
+  --green-clr-dark2: #155724;
+  --green-clr-light1: hsl(125, 71%, 66%);
+  --green-clr-light2: #d4edda;
+
+  /* Spacing */
+  --spacing: 0.25rem;
+
+  /* border radisu */
+  --radisu: 0.5rem;
+
+  /* transition */
+  --tranistion: all 0.3s linear;
+
+  /* font families */
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Roboto", sans-serif;
+
+  /* Shadows */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* widths */
+  --max-width: 1170px;
+  --min-width: 620px;
+}
+
+h1 {
+  font-size: 3;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+body {
+  background-color: var(--primary-clr);
+  font-size: 0.875rem;
+  font-family: var(--ff-primary);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-secondary);
+  line-height: 1.25rem;
+  margin-bottom: 0.85rem;
+  color: var(--clr-grey-1);
+}
+
+@media only screen and (min-width: 800px) {
+  h1 {
+    font-size: 4;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1rem;
+  }
+}
+
+.section-center {
+  padding: 2rem;
+  background-color: var(--white-clr);
+  width: 90vw;
+  max-width: 35rem;
+  margin: 8rem auto;
+  border-radius: var(--radisu);
+  box-shadow: var(--light-shadow);
+  transition: var(--tranistion);
+}
+
+.section-center:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.alert {
+  padding: 0.1rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  visibility: hidden;
+}
+
+.alert-success {
+  background-color: var(--green-clr-light2);
+  color: var(--green-clr-dark2);
+  visibility: visible;
+}
+
+.alert-danger {
+  background-color: var(--red-clr-light2);
+  color: var(--red-clr-dark2);
+  visibility: visible;
+}
+
+.section-center h3 {
+  text-align: center;
+  letter-spacing: var(--spacing);
+  margin-bottom: 2rem;
+}
+
+.form-center {
+  display: flex;
+  justify-content: center;
+}
+
+.grocery {
+  flex: 1 0 auto;
+  padding: 0.4rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  background: var(--clr-grey-6);
+  color: var(--clr-grey-5);
+  border: transparent;
+  border-top-left-radius: var(--radisu);
+  border-bottom-left-radius: var(--radisu);
+  font-family: var(--ff-secondary);
+}
+
+.grocery::placeholder {
+  color: var(--clr-grey-5);
+}
+
+.submit {
+  flex: 0 0 5rem;
+  font-size: 0.85rem;
+  border: transparent;
+  border-top-right-radius: var(--radisu);
+  border-bottom-right-radius: var(--radisu);
+  background-color: var(--secondary-clr2);
+  letter-spacing: 2px;
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: var(--tranistion);
+}
+
+.submit:hover {
+  background-color: var(--secondary-clr1);
+  color: var(--white-clr);
+}
+
+.grocery-container {
+  margin-top: 1.25rem;
+  visibility: hidden;
+}
+
+.show-container {
+  visibility: visible;
+}
+
+.grocery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  color: var(--clr-grey-1);
+  border-radius: var(--radisu);
+  padding: 0.25rem 1rem;
+  transition: var(--tranistion);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.grocery-item:hover {
+  background-color: var(--clr-grey-6);
+}
+
+.grocery-item:hover .item-title {
+  color: var(--clr-grey-5);
+}
+
+.edit-btn,
+.delete-btn {
+  font-size: 0.75rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.edit-btn {
+  color: var(--green-clr-light1);
+}
+
+.edit-btn:hover {
+  color: var(--green-clr-dark1);
+}
+
+.delete-btn {
+  color: var(--red-clr-light1);
+}
+
+.delete-btn:hover {
+  color: var(--red-clr-dark1);
+}
+
+.clear-btn {
+  display: block;
+  width: 10rem;
+  height: 1.5rem;
+  font-size: 0.85rem;
+  letter-spacing: var(--spacing);
+  background-color: transparent;
+  border: none;
+  color: var(--red-clr-light1);
+  cursor: pointer;
+  margin: auto;
+}
+
+.clear-btn:hover {
+  color: var(--red-clr-dark1);
+}
