@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(35, 185, 255);
+  --transition: all 0.3s linear;
+  --radius: 0.5rem;
+}
+
+body {
+  font-size: 0.875rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+.slider {
+  margin: 1rem auto;
+  margin-top: 5rem;
+  background-color: red;
+  width: 80vw;
+  height: 40vh;
+  max-width: 80rem;
+  border: 7px solid var(--primary-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 576px) {
+  .slider {
+    height: 45vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .slider {
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .slider {
+    height: 80vh;
+  }
+}
+
+.btn-contaienr {
+  display: flex;
+  justify-content: center;
+}
+
+.prev-btn,
+.next-btn {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  margin-right: 0.8rem;
+  color: hsl(210, 22%, 49%);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: hsl(209, 28%, 39%);
+}
