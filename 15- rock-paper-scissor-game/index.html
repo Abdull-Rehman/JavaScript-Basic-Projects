@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock, Paper & Scissor Game</title>
+  </head>
+  <body>
+    <header>
+      <h2>Rock, Papaer & Scissor Game</h2>
+    </header>
+    <section class="container">
+      <div class="win-counter">
+        <span class="labels user-label">user</span>
+        <span class="labels comp-label">comp</span>
+        <span class="userWin-value">0</span>
+        <span class="colon">:</span>
+        <span class="compWin-value">0</span>
+      </div>
+      <div class="result">
+        <h3>Result</h3>
+      </div>
+      <div class="moves-container">
+        <div class="moves">
+          <div class="move user-move"><i class="fa-solid fa-hand"></i></div>
+          <div class="move comp-move"><i class="fa-solid fa-hand"></i></div>
+        </div>
+      </div>
+      <div class="move-btns">
+        <span class="move-btn" data-id="r">
+          <i class="fa-solid fa-hand-back-fist"></i>
+        </span>
+        <span class="move-btn" data-id="p">
+          <i class="fa-solid fa-hand"></i>
+        </span>
+        <span class="move-btn" data-id="s">
+          <i class="fa-solid fa-hand-scissors"></i>
+        </span>
+      </div>
+      <p>make your move.</p>
+    </section>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/04bfb67fb5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

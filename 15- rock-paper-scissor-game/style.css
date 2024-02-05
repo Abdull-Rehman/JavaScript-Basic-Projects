@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  /* primary/main color */
+  --clr-primary-2: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-3: hsl(205, 89%, 70%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  /* grey used for paragraphs */
+  --clr-grey-2: hsl(210, 22%, 49%);
+  --clr-grey-3: hsl(210, 36%, 96%);
+
+  --white-clr: #fff;
+  --black-clr: #222;
+
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  --ff-primary: "Open Sans", Sans-serif;
+  --ff-secondary: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--clr-grey-3);
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-grey-1);
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+header h2 {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  background-color: var(--clr-primary-3);
+}
+
+.win-counter {
+  width: 10rem;
+  height: 4rem;
+  font-size: 2rem;
+  background-color: var(--white-clr);
+  box-shadow: var(--dark-shadow);
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  line-height: 4rem;
+  border-radius: 0.5rem;
+}
+
+.labels {
+  position: absolute;
+  font-size: 0.8rem;
+  background-color: var(--clr-primary-3);
+  color: var(--clr-grey-1);
+  line-height: normal;
+  padding: 0 0.2rem;
+  border-radius: 0.2rem;
+  top: 36%;
+}
+
+.user-label {
+  left: -15px;
+}
+
+.comp-label {
+  right: -21px;
+}
+
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.result h3 {
+  margin: 1.2rem 0;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  background-color: red;
+  opacity: 0;
+}
+
+h3.win {
+  background-color: greenyellow;
+  opacity: 1;
+}
+
+h3.lose {
+  background-color: rgb(255, 141, 141);
+  opacity: 1;
+}
+
+h3.draw {
+  background-color: yellow;
+  opacity: 1;
+}
+
+.moves-container {
+  width: 90%;
+  max-width: 25rem;
+  margin: 0rem auto;
+  margin-bottom: 1.5rem;
+  background-color: var(--white-clr);
+  box-shadow: var(--dark-shadow);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.moves {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10rem;
+  color: var(--clr-primary-3);
+  font-size: 5rem;
+}
+
+.move {
+  display: grid;
+  place-items: center;
+}
+
+.user-move {
+  border-right: 1px solid var(--clr-grey-2);
+}
+
+.move-btns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2.5rem;
+  color: var(--clr-primary-2);
+}
+
+.move-btn {
+  border: 0.25rem solid var(--clr-primary-3);
+  padding: 0.5rem 1.1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
