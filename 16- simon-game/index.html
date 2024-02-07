@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simon Game</title>
+
+    <audio id="clip1">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" />
+    </audio>
+    <audio id="clip2">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" />
+    </audio>
+    <audio id="clip3">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" />
+    </audio>
+    <audio id="clip4">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" />
+    </audio>
+  </head>
+  <body>
+    <section class="container">
+      <div class="greenBox boxe" data-id="1"></div>
+      <div class="redBox boxe" data-id="2"></div>
+      <div class="yellowBox boxe" data-id="3"></div>
+      <div class="blueBox boxe" data-id="4"></div>
+      <div class="section-center">
+        <div class="center-box">
+          <h2>Simon</h2>
+          <div class="btns-container">
+            <div class="start-btn">Start</div>
+            <div class="power-btn btn-box">
+              <span class="btn"></span>
+              <span class="label">Power</span>
+            </div>
+            <div class="strict-btn btn-box">
+              <span class="btn"></span>
+              <span class="label">Strict</span>
+            </div>
+          </div>
+          <div class="turn"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
