@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #e3e3e3;
+  --red-clr: #4e1a21;
+  --green-clr: #194d40;
+  --blue-clr: #19244e;
+  --yellow-clr: #504819;
+
+  --primary-ff: "roboto", sans-serif;
+  --secondary-ff: "open sans", sans-serif;
+
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --transition: all 0.3s linear;
+
+  --shadow-light: 0 15px 25px rgba(0, 0, 0, 0.13);
+  --shadow-dark: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.simon-game.on {
+  --red-clr: #782c35;
+  --green-clr: #2c7865;
+  --blue-clr: #2c3b78;
+  --yellow-clr: #786c2c;
+}
+
+.simon-game.flashLight {
+  --red-clr: #ff0015;
+  --green-clr: #6cc7ac;
+  --blue-clr: #5e6fc9;
+  --yellow-clr: #c5b161;
+}
+
+body {
+  background-color: var(--primary-clr);
+  font-size: 17px;
+  font-family: var(--primary-ff);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simon-game {
+  width: 25rem;
+  max-width: 95%;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-dark);
+}
+
+.buttons {
+  width: 90%;
+  height: 50px;
+  background-color: var(--primary-clr);
+  margin-top: 1rem;
+  box-shadow: var(--shadow-light);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#on-of,
+#start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 0;
+  padding: 0.9rem 2rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: var(--radius);
+  outline: none;
+  cursor: pointer;
+}
+
+.buttons:hover {
+  box-shadow: var(--shadow-dark);
+}
+
+.strict-mode {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.strict-mode input {
+  width: 18px;
+  height: 18px;
+}
+
+.color-boxes {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.color-box {
+  width: 8rem;
+  height: 8rem;
+  border-radius: var(--radius);
+}
+
+#color-box1 {
+  background-color: var(--red-clr);
+}
+
+#color-box2 {
+  background-color: var(--green-clr);
+}
+
+#color-box3 {
+  background-color: var(--blue-clr);
+}
+
+#color-box4 {
+  background-color: var(--yellow-clr);
+}
+
+.count-box {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  border: 1.5px solid black;
+  border-radius: 0.2rem;
+  background-color: var(--primary-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 668px) {
+  .simon-game {
+    width: 90%;
+    max-width: 45rem;
+  }
+
+  .color-box {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .count-box {
+    width: 50px;
+    height: 40px;
+  }
+}
