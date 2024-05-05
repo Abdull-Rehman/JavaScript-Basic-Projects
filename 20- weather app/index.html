@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App </title>
+</head>
+
+<body>
+
+    <main class="main-coantainer">
+        <h2 class="main-title">Weather App</h2>
+        <div class="section-center">
+            <header class="search-box">
+                <input type="search" placeholder="City name">
+                <button class="searcb-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </header>
+            <div class="error-container">
+                <h2 class="error-div">City Not Found</h2>
+                <img src="./assets/404.png" class="error-img" alt="">
+            </div>
+            <div class="body">
+                <div class="image-info">
+                    <img src="./assets/clear.png" alt="">
+                    <div class="info">
+                        <span class="temperature">45 <sup>°C</sup></span>
+                        <span class="weather-status">Cloudy</span>
+                    </div>
+                </div>
+                <div class="humidity-windSpeed">
+                    <div class="humidity">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div class="title-value">
+                            <span class="value">45%</span>
+                            <span class="title">Humidity</span>
+                        </div>
+                    </div>
+                    <div class="windSpeed">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="title-value">
+                            <span class="value">12KM/H</span>
+                            <span class="title">Wind Speed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="ap.js"></script>
+    <script src="https://kit.fontawesome.com/1c1fbd9d6a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
