@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary-clr: #e3e3e3;
+  --secondary-clr: #fff;
+  --secondary-clr-light: #f6f5ff;
+  --action-clr: #695cfe;
+  --action-clr-light: hsl(245, 99%, 71%);
+  --text-clr: #707070;
+
+  --toggle-clr: #ddd;
+  --blur-clr: rgba(0, 0, 0, 0.9);
+
+  --primary-ff: "roboto", sans-serif;
+  --sedondary-ff: "open sans", sans-serif;
+
+  --radius: 0.5rem;
+  --transition: all 0.2s linear;
+  --spacing: 0.25rem;
+
+  --shadow-light: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--primary-clr);
+  font-size: 17px;
+  font-family: var(--primary-ff);
+}
+
+.main-coantainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: var(--secondary-clr);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav .name {
+  font-size: 2rem;
+  border-bottom: 5px solid var(--action-clr);
+  padding-bottom: 0.3rem;
+}
+
+nav input {
+  width: 15rem;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-clr);
+  padding-left: 0.5rem;
+  font-size: 1.1rem;
+}
+
+nav button {
+  height: 40px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  background-color: var(--action-clr);
+  color: var(--secondary-clr);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+nav button:hover {
+  background-color: var(--action-clr-light);
+}
+
+main {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin: 0 auto;
+  margin-top: calc(4rem + 160px);
+  margin-bottom: 4rem;
+}
+
+.hide-message {
+  display: none;
+}
+
+.section-center {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.recipe-card {
+  width: 25rem;
+  height: 420px;
+  background-color: var(--secondary-clr);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  border-radius: var(--radius);
+}
+
+.recipe-card:hover {
+  box-shadow: var(--shadow-dark);
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+}
+
+.image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.recipe-origin,
+.recipe-category {
+  font-size: 1.2rem;
+}
+
+.see-recipe-btn {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: var(--action-clr);
+  color: var(--secondary-clr);
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.see-recipe-btn:hover {
+  background-color: var(--action-clr-light);
+}
+
+.blur-box {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: var(--blur-clr);
+  z-index: 1090;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.show-blur-box {
+  display: flex;
+}
+
+.close-btn {
+  position: absolute;
+  right: 9px;
+  top: 13px;
+  font-size: 1.7rem;
+  padding: 0.1rem;
+  background-color: var(--action-clr);
+  color: var(--secondary-clr);
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.recipe-box {
+  width: 25rem;
+  height: 450px;
+  background-color: var(--secondary-clr);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.recipe-box .recipe-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ingredients {
+  margin: 2rem 0;
+}
+
+.ingredients ul {
+  display: flex;
+  flex-flow: column;
+  gap: 0.6rem;
+  margin: 0rem 1rem;
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.instructions p {
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  text-align: justify;
+}
+
+.close-btn:hover {
+  background-color: var(--action-clr-light);
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    margin-top: calc(4rem + 94px);
+  }
+
+  .section-center {
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .recipe-card {
+    width: 20rem;
+  }
+
+  header nav {
+    flex-flow: row;
+  }
+}
